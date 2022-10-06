@@ -1,3 +1,114 @@
-<DOCTYPE! html>
-  
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Fale Conosco</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilo_fale.css">
+    </head>
+    <body>
+        <div class="caixa_form">
+            <form name="formulario">
+                <h1>Fale Conosco</h1>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">
+                        <span>Nome</span>
+                        <input type="text" class="caixa_texto" id="nomeid" required>
+                    </label>
+
+                    <label for="email">
+                        <span>Email</span>
+                        <input type="email" class="caixa_texto" id="emailid" placeholder="fulano@email.com" required>
+                    </label>
+
+                    <label for="fone">
+                        <span>Fone</span>
+                        <input type="text" class="caixa_texto" id="foneid" placeholder="xx xxxx-xxxx" pattern="[0-9]{2}\s[0-9]{4}-[0-9]{4}" required>                        
+                    </label>
+
+                    <label for="endereco">
+                        <span>Endereço</span>
+                        <input type="text" class="caixa_texto" placeholder="Rua / Av. / Alameda" id="enderecoid" required>                        
+                    </label>
+
+                    <label for="bairro">
+                        <span>Bairro</span>
+                        <input type="text" class="caixa_texto" id="bairroid" placeholder="Jd. / Villa" required>
+                    </label>
+
+                    <label for="cidade">
+                            <span>Cidade</span>
+                            <input type="text" class="caixa_texto" id="cidadeid" required>&nbsp;&nbsp;
+
+                        <select id="UFid">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </label>
+
+                    <label for="CEP">
+                        <span>CEP</span>
+                        <input type="text" class="caixa_texto" id="cepid" placeholder="xxxxx-xxx" pattern="[0-9]{5}-[0-9]{3}" required>
+                    </label>
+
+                    <label for="senha">
+                        <span>Senha</span>
+                        <input type="password" class="caixa_texto" id="senhaid" placeholder="Min. 6 caracteres" pattern=".{6,}" required>
+                    </label>
+
+                    <label for="datanasc">
+                        <span>Data Nascimento</span>
+                        <input type="text" class="caixa_texto" id="datanascid" placeholder="xx/xx/xxxx" patter="[0-9]{2}\/[0-9]{2}\/[0-9]{4}" required>
+                    </label>                    
+                </fieldset>
+                <fieldset>
+                    <legend>Conhecimento Técnico</legend>
+                    <div id="itens_esquerda">
+                        <input type="checkbox" name="conhecimento" value="HTML5">HTML 5<br>
+                        <input type="checkbox" name="conhecimento" value="Javascript">Javascript<br>
+                        <input type="checkbox" name="conhecimento" value="CSS">CSS<br>
+                    </div>
+                    <div id="itens_meio">
+                        <input type="checkbox" name="conhecimento" value="PHP">PHP<br>
+                        <input type="checkbox" name="conhecimento" value="Photoshop">Photoshop<br>
+                        <input type="checkbox" name="conhecimento" value="MySQL">MySQL<br>
+                    </div>
+                    <div class="itens_direita">
+                        <input type="checkbox" name="conhecimento" value="JSON">JSON<br>
+                        <input type="checkbox" name="conhecimento" value="JQuery">JQuery<br>
+                        <input type="checkbox" name="conhecimento" value="Nodejs">Nodejs<br>
+                    </div>
+                </fieldset>
+                <p>
+                    <input type="submit" value="Enviar">&nbsp;&nbsp;
+                    <input type="reset" value="reset">
+                </p>
+            </form>
+        </div>
+    </body>
 </html>
