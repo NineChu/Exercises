@@ -10,33 +10,3 @@
     margin: 5px;
     font-weight: bold;
 }
-
-.caixa_form input.caixa_texto, #UFid {
-    border: 1px solid rgb(0,195,255);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.caixa_form input.caixa_texto:focus, #UFid:focus {
-    border: 1px solid rgb(0, 81, 255);
-}
-
-.caixa_form input[type=text],
-.caixa_form input[type=email],
-.caixa_form input[type=password] {
-    border-radius: 5px;
-    width: 70;    
-}
-
-#bairroid, #cidadeid, #senhaid, #cepid, #datanascid {
-    width:30px;
-}
-
-#itens_esquerda, #itens_meio, #itens_direita {
-    width: 35%;
-    font-family: arial;
-    font-size: 0.8em;
-}
-
-#itens_esquerda, #itens_meio{float: left;}
-.itens_direita {float: left;}
