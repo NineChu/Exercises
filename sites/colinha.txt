@@ -38,7 +38,7 @@
 
                     <label for="cidade">
                         <span>Cidade</span>
-                        <input type="text" class="caixa_texto" id="cidadeid" required />&nbsp;&nbsp;
+                        <input type="text" class="caixa_texto" id="cidadeid" required />
 
                         <select id="UFid">
                             <option value="AC">AC</option>
