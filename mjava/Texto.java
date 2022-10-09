@@ -10,17 +10,20 @@ public class Texto extends JFrame implements ActionListener {
 
     JLabel l1 = new JLabel("Texto a ser Editado:");
     JTextArea a1 = new JTextArea(10, 50);
+
+    JPanel p1 = new JPanel();
     JButton b1 = new JButton("Gravar");
     JButton b2 = new JButton("Abrir");
     JButton b3 = new JButton("Limpar");
     JButton b4 = new JButton("Sair");
+
     JLabel l2 = new JLabel("     Status do Arquivo:     ");
     JTextField f1 = new JTextField(40);
-    JPanel p1 = new JPanel();
+
     Font font1 = new Font("", Font.BOLD, 16);
+
     FileDialog fs;
     FileDialog fl;
-    Desktop d = Desktop.getDesktop();
     // JFileChooser fc = new JFileChooser();
 
 
@@ -28,26 +31,32 @@ public class Texto extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b1) {
             try {
-                fs = new FileDialog(new Dialog(this), "Salvando arquivo...", FileDialog.SAVE);
+                fs = new FileDialog(new Dialog(this), "Salvando arquivo", FileDialog.SAVE);
                 fs.setVisible(true);
+
                 PrintWriter fw = new PrintWriter(fs.getDirectory() + fs.getFile());
                 fw.print(a1.getText());
                 fw.close();
+                f1.setText("Arquivo salvo com sucesso !");
             } catch (Exception ex) {
                 f1.setText(String.valueOf(ex));
             }
         } else if (e.getSource() == b2) {
             try {
-                fl = new FileDialog(new Dialog(this), "Salvando arquivo...", FileDialog.LOAD);
+                fl = new FileDialog(new Dialog(this), "Abrindo arquivo", FileDialog.LOAD);
                 fl.setVisible(true);
+                
                 BufferedReader fr = new BufferedReader(new FileReader(fl.getDirectory() + fl.getFile()));
                 if (a1.getText() != "") {
                     a1.setText("");
                 }
-                while (fr.readLine()) {
-                    a1.setText(a1.getText()+fr.readLine());
+                String linha = fr.readLine();
+                while (!(linha == null || linha.isEmpty())) {
+                    a1.setText(a1.getText() + linha+"\n");
+                    linha = fr.readLine();
                 }
                 fr.close();
+                f1.setText("Arquivo aberto com sucesso !");
             } catch (Exception ex) {
                 f1.setText(String.valueOf(ex));
             }

@@ -2,72 +2,54 @@
     width: 40%;
     margin: auto;
     font-family: arial;
+    font-size: 90%;
 }
 .caixa_form label {
-    font-size: 0.8em;
-    display: inline-block;
-    margin-bottom: 10px;
     font-weight: bold;
+    padding: 5px;
 }
-.caixa_form .dados_pessoais input, #UFid {
+.caixa_form label::after {
+    content: "*";
+    color: red;
+}
+.caixa_form .dados_pessoais input, #UF {
     border: 1px solid rgb(0,195,255);
     padding: 5px;
+    margin-bottom: 15px;
     border-radius: 5px;
     font-family: inherit;
+    min-width: 0;
 }
-.caixa_form .dados_pessoais input:focus, #UFid:focus {
+.caixa_form .dados_pessoais input:focus, #UF:focus {
     outline: none;
     border: 2px solid rgb(0, 80, 255);
 }
 
 
-.caixa_form .dados_pessoais input {
-    width: 70%;
-}
-#cidadeUF {
-    width: 70%;
-}
-#cep {
-    width: 40%;
-}
 #cidade_cep_grid {
-    grid-template-columns: auto auto auto auto auto;
+    display: grid;
+    grid-template-columns: 15% 30% 10% 5% 20%;
+    column-gap: 5%;
+}
+.item1 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.item2 {
+    display: grid;
+    grid-template-columns: 20% 30%;
 }
 
 
 #itens_esquerda, #itens_meio, #itens_direita {
     width: 33%;
-    font-size: 0.8em;
     float: left;
 }
 .caixa_form input.botao{
     border: transparent;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: orange;;
     color: white;
     font-family: inherit;
 }
-
-
-/*
-
-
-#lcep {
-    float: right;
-}
-
-#lcidade, #lcep {
-    display: inline-block;
-    width: 45%;
-}
-
-#cidade {
-    width: 40%;
-    float: unset;
-}
-
-#UF {
-    width: 27%;
-}
-*/
