@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(129, 188, 196);
+}
+
+h1 {
+    text-align: center;
+    font-family: "Comic Sans Ms";
+    font-size: 24px
+}
+
+h2 {
+    font-family: arial;
+    font-size: 21px;
+    color: #5c34f0;
+}
+
+h3 {
+    font-family: verdana;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: #971313;
+}
+p {
+    font-family: verdana;
+    font-size: 14;
+    font-weight: bold;
+}

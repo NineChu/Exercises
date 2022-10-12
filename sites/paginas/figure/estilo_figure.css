@@ -1,0 +1,24 @@
+body {
+    background-color: #f0f0f0;
+}
+
+h1#titulo {
+    font-family: verdana;
+    font-size: 22px;
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-family: verdana;
+    font-size: 12px;
+}
+
+p {
+    font-family: verdana;
+    font-size: 18px;
+    text-align: center;
+}

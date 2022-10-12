@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(82, 123, 255)
+}
+
+#grid-container {
+    align-items: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 80%;
+    border: 3px solid #000;
+    border-radius: 15px;
+}
+
+#titulo {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 2em;
+}
+
+#subtitulo_1 {
+    font-family: "arial";
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+a {
+    font-family: "Comic Sans MS";
+    color: rgb(105, 18, 177);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline
+}
+
+.paragrafo {
+    text-align: center;
+    font-family: "arial";
+    font-size: 1.1em;
+}
+
+#cidade_londres, #cidade_paris, #cidade_toquio, #cidade_moscou {
+    text-align: center;
+    margin: 5%;
+    border-radius: 15px;
+    opacity: 0.5
+}
+
+#cidade_londres:hover, #cidade_paris:hover, #cidade_toquio:hover, #cidade_moscou:hover {
+    opacity: 1;
+}
+
+#cidade_londres {
+    background-color: rgb(245, 203, 34);
+    border: 3px solid rgb(121, 102, 25);
+}
+
+#cidade_paris {
+    background-color: rgb(52, 196, 38);
+    border: 3px solid rgb(16, 75, 10);
+}
+
+#cidade_toquio {
+    background-color: rgb(206, 78, 55);
+    border: 3px solid rgb(112, 27, 12);
+}
+
+#cidade_moscou {
+    background-color: rgb(199, 75, 206);
+    border: 3px solid rgb(104, 34, 107);
+}

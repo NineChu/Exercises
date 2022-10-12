@@ -1,0 +1,50 @@
+#include <bas.h>
+void main() {
+  clrscr();
+  int plr[2] = {24, 1};
+  char grd[25][80], key = 'w';
+  printf("\n Press \"WASD\" to move");
+  printf("\n \"P\" 2 times to leave");
+  getch();
+  while (key != 27) {
+    for(int i = 0; i < 25; i++) {
+      for(int i2 = 0; i2 < 80; i2++) {
+	grd[i][i2] = ' ';
+      }
+    }
+    grd[plr[0]][plr[1]] = 219;
+    clrscr();
+    for (i = 0; i < 25; i++) {
+      for (int i2 = 0; i2 < 80; i2++) {
+	if (i == 24 && i2 == 79){
+	  break;
+	}
+	cout << grd[i][i2];
+      }
+    }
+    key = getch();
+    switch (key) {
+      case 'w':
+	if (plr[0] > 0) {
+	  plr[0]--;
+	}
+	break;
+      case 'a':
+	if (plr[1] > 0) {
+	  plr[1]--;
+	}
+	break;
+      case 's':
+	if (plr[0] < 24) {
+	  plr[0]++;
+	}
+	break;
+      case 'd':
+	if (plr[1] < 79) {
+	  plr[1]++;
+	}
+	break;
+    }
+  }
+  getch();
+}

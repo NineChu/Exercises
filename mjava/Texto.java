@@ -2,14 +2,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.*;
 
 public class Texto extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new Texto();
     }
 
+    int abc = 92;
     JLabel l1 = new JLabel("Texto a ser Editado:");
     JTextArea a1 = new JTextArea(10, 50);
+    JScrollPane sp1 = new JScrollPane(a1, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
     JPanel p1 = new JPanel();
     JButton b1 = new JButton("Gravar");
@@ -24,9 +27,6 @@ public class Texto extends JFrame implements ActionListener {
 
     FileDialog fs;
     FileDialog fl;
-    // JFileChooser fc = new JFileChooser();
-
-
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b1) {
@@ -46,14 +46,12 @@ public class Texto extends JFrame implements ActionListener {
                 fl = new FileDialog(new Dialog(this), "Abrindo arquivo", FileDialog.LOAD);
                 fl.setVisible(true);
                 
-                BufferedReader fr = new BufferedReader(new FileReader(fl.getDirectory() + fl.getFile()));
+                Scanner fr = new Scanner(new FileReader(fs.getDirectory() + fs.getFile()));
                 if (a1.getText() != "") {
                     a1.setText("");
                 }
-                String linha = fr.readLine();
-                while (!(linha == null || linha.isEmpty())) {
-                    a1.setText(a1.getText() + linha+"\n");
-                    linha = fr.readLine();
+                while (fr.hasNextLine()) {
+                    a1.setText(a1.getText() + fr.nextLine() + "\n");
                 }
                 fr.close();
                 f1.setText("Arquivo aberto com sucesso !");
@@ -63,6 +61,7 @@ public class Texto extends JFrame implements ActionListener {
         } else if (e.getSource() == b3) {
             a1.setText("");
             f1.setText("");
+            abc--;
         } else if (e.getSource() == b4) {
             System.exit(0);
         }
@@ -73,6 +72,7 @@ public class Texto extends JFrame implements ActionListener {
         setSize(600, 350);
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.YELLOW);
+        setResizable(false);
 
         b1.addActionListener(this);
         b2.addActionListener(this);
@@ -97,7 +97,7 @@ public class Texto extends JFrame implements ActionListener {
         p1.add(b4);
 
         add(l1);
-        add(a1);
+        add(sp1);
         add(p1);
         add(l2);
         add(f1);

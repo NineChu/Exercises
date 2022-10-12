@@ -1,0 +1,18 @@
+body{
+    background-color: #bb99ff;
+}
+#titulo{
+    font-family: verdana;
+    font-size: 26px;
+    text-align: center;
+    color: #000090;
+}
+.paragrafo{
+    font-family: verdana;
+    font-size: 18px;
+    text-align: justify;
+    margin: 50px;
+}
+#regua_horizontal{
+    width: 90%;
+}

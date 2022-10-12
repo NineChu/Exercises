@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(100, 100, 235)
+}
+
+#titulo {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 2em;
+    color:#000080
+}
+
+.subtitulo {
+    font-family: "Verdana";
+    font-size: 1.5em;
+    color: rgb(50, 50, 192);
+}
+
+ul, ol {
+    font-family: "Arial";
+    font-size: 1em;
+    color: #505050;
+}
+
+#lista_ameriaca_sul{
+    list-style-type: circle;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+a { 
+    font-family:verdana;
+    color: #505050;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
