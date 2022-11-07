@@ -11,6 +11,6 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use('/', rotas);
 
-app.listen(3001, () => {
-    console.log('Servidor Web criado através do express');
+const listener = app.listen(3001, () => {
+    console.log('Servidor Web criado através do express na porta ' + listener.address().port);
 });
