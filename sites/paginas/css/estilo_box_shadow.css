@@ -1,0 +1,23 @@
+#caixa {
+    background-color: #eebf3e;
+    width: 45%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #505050;
+}
+#titulo {
+    font-family: "comic sans ms";
+    text-align: center;
+    color: rgb(36 97 18);
+    font-size: 22px;
+}
+#paragrafo, #lista {
+    font-family: arial;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: bold;
+}
+#lista {
+    list-style-type: circle;
+}

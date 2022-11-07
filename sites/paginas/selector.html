@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Seletor Descendente CSS</title>
+        <meta charset="UTF-8" />
+        <style>
+            div p {
+                background-color: yellow;
+            }
+            div > p {
+                border: solid 1px blue;
+            }
+            div + p {
+                background-color: red;
+            }
+            div ~ p {
+                border: solid 3px green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Este parágrafo está dentro da tag div.</p>
+            <p>Este parágrafo também está dentro da tag div.</p>
+            <section>
+                <p>Este parágrafo também está dentro da tag div.</p>
+            </section>
+            <p>Este parágrafo também está dentro da tag div.</p>
+        </div>
+        <p>Este parágrafo não está dentro da tag div.</p>
+        <p>Este parágrafo também não está dentro da tag div.</p>
+    </body>
+</html>

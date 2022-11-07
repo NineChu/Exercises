@@ -19,7 +19,7 @@ public class TextoChooser extends JFrame implements ActionListener {
     JButton b3 = new JButton("Limpar");
     JButton b4 = new JButton("Sair");
 
-    JLabel l2 = new JLabel("     Status do Arquivo:     ");
+    JLabel l2 = new JLabel("Status do Arquivo:");
     JTextField f1 = new JTextField(40);
 
     Font font1 = new Font("", Font.BOLD, 16);
@@ -84,6 +84,8 @@ public class TextoChooser extends JFrame implements ActionListener {
         f1.setEditable(false);
         l1.setFont(font1);
         l2.setFont(font1);
+        // l2.setHorizontalAlignment(JLabel.CENTER);
+        // l2.setPreferredSize(new Dimension(150, 20));
 
         b1.setPreferredSize(new Dimension(130, 30));
         b2.setPreferredSize(new Dimension(130, 30));
@@ -107,3 +109,21 @@ public class TextoChooser extends JFrame implements ActionListener {
         setVisible(true);
     }
 }
+
+/*
+public static void fecharTodosOsJFrames() {
+    for (JFrame jFrame : obterJanelasDoTipo(JFrame.class)) {
+        jFrame.dispose();
+    }
+}
+
+public static <W extends Window> List<W> obterJanelasDoTipo(Class<W> tipo) {
+    List<W> janelas = new LinkedList<>();
+    for (Window janela : Window.getWindows()) {
+        if (tipo.isAssignableFrom(janela )) {
+            janelas.add((W) janela);
+        }
+    }
+    return janelas;
+}
+ */

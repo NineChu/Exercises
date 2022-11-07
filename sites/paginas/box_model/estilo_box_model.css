@@ -1,0 +1,16 @@
+#titulo {
+    text-align: center;
+    font-family: arial;
+    font-size: 22px;
+}
+
+#imagem {
+    text-align: center;
+}
+#container {
+    width: 600px;
+    padding: 10px;
+    border: 5px solid #092a3a;
+    margin: auto;
+    font-family: arial;
+}
