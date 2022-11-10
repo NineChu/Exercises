@@ -12,23 +12,29 @@ h1 {
 }
 #caixa_formulario {
     background-color: #86b1ff;
+    display: grid;
     margin: auto;
-    width: 300px;
+    border-radius: 0.5em;
+    padding: 1%;
+    width: 20%;
 }
 #caixa_formulario label {
-    display: block;
-    margin: 0 0 10px 0;
+    display: grid;
+    justify-items: center;
+    margin: 1% 0 0 0;
 }
 table {
     margin: auto;
 }
 input {
-    background-color: #86b1ff;
     border: 1px solid #000000;
-    border-radius: 8px;
+    border-radius: 0.5em;
+    width: 100%;
 }
 button {
     background-color: #493268;
     color: #ffffff;
     font-weight: bold;
+    margin: 2%;
+    padding: 1%;
 }
