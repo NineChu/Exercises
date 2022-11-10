@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cadastro de Clientes</title>
+        <link rel="stylesheet" href="css/estilo.css" type="text/css" />
+    </head>
+    <body>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tecnologia">Tecnologia</a>
+            <a href="/cadastro">Cadastro</a>
+            <a href="/alterar_registro">Alterar registro</a>
+            <a href="/alterar_cpf">Alterar CPF</a>
+            <a href="/lista_clientes">Lista</a>
+        </nav>
+        <main>
+            <article>
+                <header>
+                    <h1 id="titulo">Cadastro</h1>
+                </header>
+                <section>
+                    <div id="caixa_formulario">
+                        <form action="/cadastrar_cliente" method="post">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required />
+
+                            <label for="cpf">CPF:</label>
+                            <input type="number" id="cpf" name="cpf" required />
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+
+                            <label for="cep">CEP:</label>
+                            <input type="number" id="cep" name="cep" required />
+
+                            <label for="telefone">Telefone:</label>
+                            <input type="number" id="telefone" name="telefone" required />
+
+                            <label for="datanasc">Data de nascimento:</label>
+                            <input type="date" id="datanasc" name="datanasc" required />
+
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                        <a href="/lista_clientes">Mostrar registros</a>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

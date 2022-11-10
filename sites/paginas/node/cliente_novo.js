@@ -1,10 +1,10 @@
 const cliente = require('./clientes');
 
 const clienteNovo = cliente.create({
-    nome: 'Gabigol',
-    cpf: '20030040099',
-    celular: '2199001234',
-    datanasc: '1996-08-30'
+    nome: 'Jefferson',
+    cpf: '01234567890',
+    celular: '5511987654321',
+    datanasc: '1969-06-20'
 });
 
 module.exports = clienteNovo;

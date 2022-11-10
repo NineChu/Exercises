@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('dbfito1', 'root', '123456', {
+const sequelize = new Sequelize('db_fito1', 'fito', '123456', {
     dialect: 'mysql',
     host: 'localhost',
     port: 3306

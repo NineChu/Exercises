@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lista de Clientes</title>
+        <link rel="stylesheet" href="css/estilo.css" type="text/css" />
+    </head>
+    <body>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tecnologia">Tecnologia</a>
+            <a href="/cadastro">Cadastro</a>
+            <a href="/alterar_registro">Alterar registro</a>
+            <a href="/alterar_cpf">Alterar CPF</a>
+            <a href="/lista_clientes">Lista</a>
+        </nav>
+        <main>
+            <article>
+                <header>
+                    <h1 id="titulo">Lista de Clientes</h1>
+                </header>
+                <section>
+                    <div id="container">
+                        <table border="1">
+                            <% cliente.forEach(regCliente =>{ %>
+                            <tr>
+                                <th scope="row"><%= regCliente.dataValues.id %></th>
+                                <th scope="row"><%= regCliente.dataValues.nome %></th>
+                                <th scope="row"><%= regCliente.dataValues.cpf %></th>
+                                <th scope="row"><%= regCliente.dataValues.email %></th>
+                                <th scope="row"><%= regCliente.dataValues.cep %></th>
+                                <th scope="row"><%= regCliente.dataValues.telefone %></th>
+                                <th scope="row"><%= regCliente.dataValues.datanasc %></th>
+                            </tr>
+                            <% }) %>
+                        </table>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

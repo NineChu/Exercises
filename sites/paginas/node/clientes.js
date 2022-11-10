@@ -4,6 +4,8 @@ const database = require('./conexao');
 const clientes = database.define('clientes', {
     id: {
         type: Sequelize.INTEGER,
+        unique: true,
+        allowNull: false,
         autoIncrement: true,
         primaryKey: true
     },
@@ -16,7 +18,16 @@ const clientes = database.define('clientes', {
         unique: true,
         allowNull: false
     },
-    celular: {
+    email: {
+        type: Sequelize.CHAR(40),
+        unique: true,
+        allowNull: false
+    },
+    cep: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    telefone: {
         type: Sequelize.CHAR(20),
         unique: true,
         allowNull: false
@@ -26,5 +37,7 @@ const clientes = database.define('clientes', {
         allowNull: false
     },
 });
+
+//clientes.sync();
 
 module.exports = clientes;

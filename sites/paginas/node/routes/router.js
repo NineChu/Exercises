@@ -11,15 +11,17 @@ router.get("/tecnologia", (req, res) => {
 });
 
 router.get("/cadastro", (req, res) => {
-    res.render("../views/secao/cadastro_cliente.ejs");
+    res.render("../views/secao/cadastro.ejs");
 });
 
-router.post("/add_cliente", (req, res) => {
+router.post("/cadastrar_cliente", (req, res) => {
     clientes
         .create({
             nome: req.body.nome,
             cpf: req.body.cpf,
-            celular: req.body.celular,
+            email: req.body.email,
+            cep: req.body.cep,
+            telefone: req.body.telefone,
             datanasc: req.body.datanasc,
         })
         .then(() => {
@@ -30,17 +32,38 @@ router.post("/add_cliente", (req, res) => {
         });
 });
 
-router.get("/alteracao", (req, res) => {
-    res.render("../views/secao/altera_cliente.ejs");
+router.get("/alterar_registro", (req, res) => {
+    res.render("../views/secao/alterarRegistro.ejs");
 })
 
-router.post("/altera_cpf", (req, res) => {
+router.post("/alterar_registro", (req, res) => {
+    clientes
+        .update({
+            nome: req.body.nome,
+            email: req.body.email,
+            cep: req.body.cep,
+            telefone: req.body.telefone,
+            datanasc: req.body.datanasc,
+        }, { where: {cpf: req.body.cpf}})
+        .then(() => {
+            res.render("../views/secao/alterarRegistro.ejs");
+        })
+        .catch((err) => {
+            res.send("Houve um " + err);
+        });
+});
+
+router.get("/alterar_cpf", (req, res) => {
+    res.render("../views/secao/alterarCPF.ejs");
+})
+
+router.post("/alterar_cpf", (req, res) => {
     clientes
         .update({
             cpf: req.body.cpf
-        }, { where: {celular: req.body.celular}})
+        }, { where: {email: req.body.email}})
         .then(() => {
-            res.send("CPF alterado com sucesso!");
+            res.render("../views/secao/alterarCPF.ejs");
         })
         .catch((err) => {
             res.send("Houve um " + err);
@@ -48,7 +71,7 @@ router.post("/altera_cpf", (req, res) => {
 });
 
 router.get("/lista_clientes", (req, res) => {
-    clientes.findAll({ attributes: ["nome", "cpf", "celular"] }).then((cliente) => res.render("../views/secao/lista_clientes.ejs", { cliente: cliente }));
+    clientes.findAll({ attributes: ["id", "nome", "cpf", "email", "cep", "telefone", "datanasc"] }).then((cliente) => res.render("../views/secao/listaClientes.ejs", { cliente: cliente }));
 });
 
 module.exports = router;

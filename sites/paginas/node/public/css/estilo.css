@@ -1,25 +1,19 @@
 body {
-    background-color: #b2ee87;
-}
-#titulo {
-    text-align: center;
-    font-family: 'Comic Sans MS';
-    font-size: 2em;
-}
-.subtitulo {
+    background-color: #6b8dce;
     font-family: arial;
-    font-size: 1.3em;
+}
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Times New Roman';
     font-weight: bold;
 }
-p {
-    font-family: arial;
-    font-size: 16px;
+h1 {
+    font-size: 2em;
 }
 #caixa_formulario {
-    width: 300px;
+    background-color: #86b1ff;
     margin: auto;
-    font-family: arial;
-    font-size: 13px;
+    width: 300px;
 }
 #caixa_formulario label {
     display: block;
@@ -29,13 +23,12 @@ table {
     margin: auto;
 }
 input {
-    background-color: #b2ee87;
-    border: 1px solid #193a8e;
+    background-color: #86b1ff;
+    border: 1px solid #000000;
     border-radius: 8px;
-    color: #1c57ea;
 }
 button {
-    background-color: orange;
-    color: #505050;
-    font-weight: bold;;
+    background-color: #493268;
+    color: #ffffff;
+    font-weight: bold;
 }
