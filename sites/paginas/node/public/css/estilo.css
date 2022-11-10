@@ -25,6 +25,9 @@ p {
     display: block;
     margin: 0 0 10px 0;
 }
+table {
+    margin: auto;
+}
 input {
     background-color: #b2ee87;
     border: 1px solid #193a8e;
